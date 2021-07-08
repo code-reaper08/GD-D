@@ -2,14 +2,34 @@ extends KinematicBody2D
 
 const GRAVITY = 10
 const JUMP_SPEED = -400
-var velocity = Vector2.ZERO
+var velocity = Vector2(0,0)
 
 func _process(delta):
+	if not is_on_floor():
+		$Sprite.play("jump")
+	if is_on_floor():
+		$Sprite.play("move")
+
 	velocity.y += GRAVITY
-	
-	if Input.is_action_just_pressed("jump") or Input.is_action_just_pressed("ui_up") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_SPEED
 		$Sprite.play("jump")
-	if Input.is_action_just_released("jump") and not is_on_floor():
-		velocity.y = 0
-	move_and_slide(velocity,Vector2.UP)
+	velocity = move_and_slide(velocity,Vector2.UP)
+
+##const SPEED = 250
+#const GRAVITY = 35
+#const JUMPFORCE = -1100
+#var velocity = Vector2(0,0)
+#func _physics_process(_delta):
+#	if is_on_floor():
+#		$Sprite.play("move")
+#	if not is_on_floor():
+#		$Sprite.play("jump")
+#
+#	velocity.y = velocity.y + GRAVITY
+#	if Input.is_action_just_pressed("jump") and is_on_floor() :
+#		velocity.y = JUMPFORCE
+#		$Sprite.play("jump")
+#
+#
+#	velocity = move_and_slide(velocity,Vector2.UP)
