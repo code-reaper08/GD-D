@@ -32,7 +32,7 @@ collision_layer = 2
 collision_mask = 2147483648
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2( 209.8, 750.592 )
+position = Vector2( 209.8, 738.322 )
 shape = SubResource( 1 )
 
 [node name="dino" parent="." instance=ExtResource( 1 )]
