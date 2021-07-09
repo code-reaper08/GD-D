@@ -70,7 +70,7 @@ animation = "move"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.55677, -1.27279 )
+position = Vector2( -1.99108, -2.40416 )
 shape = SubResource( 9 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
