@@ -32,6 +32,12 @@ jump={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="dino"
+2d_physics/layer_2="floor"
+2d_physics/layer_3="enemy"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

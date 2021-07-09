@@ -16,6 +16,8 @@ position = Vector2( 710.686, 403.79 )
 texture = ExtResource( 2 )
 
 [node name="Floor" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2147483648
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2( 605.283, 647.71 )
@@ -23,6 +25,7 @@ shape = SubResource( 1 )
 
 [node name="dino" parent="." instance=ExtResource( 1 )]
 position = Vector2( 290.885, 307.297 )
+collision_mask = 6
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
