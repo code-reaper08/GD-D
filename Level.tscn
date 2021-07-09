@@ -9,6 +9,7 @@ extents = Vector2( 617.462, 77.9333 )
 [node name="Level" type="Node"]
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 710.686, 403.79 )
 texture = ExtResource( 2 )
 
