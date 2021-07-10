@@ -5,7 +5,7 @@
 [ext_resource path="res://Level.gd" type="Script" id=3]
 [ext_resource path="res://assets/Always In My Heart.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 133.703, 77.9333 )
 
 [sub_resource type="AtlasTexture" id=2]
@@ -23,7 +23,7 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
@@ -31,7 +31,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=6]
 size = 50
 font_data = ExtResource( 4 )
 
@@ -62,7 +62,7 @@ collision_mask = 2147483648
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2( 209.8, 738.322 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="dino" parent="." instance=ExtResource( 1 )]
 position = Vector2( 221.982, 592.347 )
@@ -75,7 +75,7 @@ autostart = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 682, 659 )
 scale = Vector2( 44.75, 3.0625 )
-frames = SubResource( 6 )
+frames = SubResource( 5 )
 animation = "floor"
 playing = true
 
@@ -86,10 +86,14 @@ margin_left = 239.5
 margin_top = 26.0
 margin_right = 471.5
 margin_bottom = 84.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "errors dodged :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Scorecalc" type="Timer" parent="."]
+autostart = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Scorecalc" to="." method="_on_Scorecalc_timeout"]
