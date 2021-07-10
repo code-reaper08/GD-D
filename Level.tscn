@@ -77,6 +77,7 @@ position = Vector2( 682, 659 )
 scale = Vector2( 44.75, 3.0625 )
 frames = SubResource( 5 )
 animation = "floor"
+frame = 1
 playing = true
 
 [node name="Label" type="Label" parent="."]

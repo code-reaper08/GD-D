@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mixkit-arcade-rising-231.ogg-409c362a0bfd97cf6f374dfc8e735cd6.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/mixkit-arcade-rising-231.ogg"
+dest_files=[ "res://.import/mixkit-arcade-rising-231.ogg-409c362a0bfd97cf6f374dfc8e735cd6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

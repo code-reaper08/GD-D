@@ -5,5 +5,7 @@ func _ready():
 		Global.highscore = Global.currentscore
 	$Highscore.text = "Highcscore : " + str(Global.highscore)
 func _process(delta):
+	$AudioStreamPlayer.play()
 	if Input.is_action_just_pressed("jump"):
 		get_tree().change_scene("res://Level.tscn")
+		

@@ -9,11 +9,13 @@ func _process(delta):
 		$Sprite.play("jump")
 	if is_on_floor():
 		$Sprite.play("move")
+		$AudioStreamPlayer.play()
 
 	velocity.y += GRAVITY
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_SPEED
 		$Sprite.play("jump")
+		
 	velocity = move_and_slide(velocity,Vector2.UP)
 
 ##const SPEED = 250
