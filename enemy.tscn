@@ -58,7 +58,7 @@ radius = 7.12465
 height = 17.8479
 
 [node name="enemy" type="Area2D"]
-position = Vector2( 1174.92, 625.847 )
+position = Vector2( 1319.92, 625.847 )
 scale = Vector2( 2.5, 2.5 )
 collision_layer = 4
 script = ExtResource( 2 )
@@ -67,9 +67,11 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.399994, 0 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 7 )
 animation = "enemy2"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
